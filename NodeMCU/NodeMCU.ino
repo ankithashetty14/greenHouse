@@ -20,6 +20,8 @@
 float sensor_1 = 0;
 float sensor_2 = 0;
 float sensor_3 = 0;
+float sensor_4 = 0;
+
 String message = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 
@@ -66,6 +68,7 @@ void Write_ThingSpeak_Data(String Value_1, String Value_2, String Value_3, Strin
   upLink += String(Value_1);  //update field 1 value
   upLink += "&field"+String(TSField_2)+"="+String(Value_2);  // update field 2 value
   upLink += "&field"+String(TSField_3)+"="+String(Value_3); // update field 3 value
+  upLink += "&field"+String(TSField_4)+"="+String(Value_4); // update field 4 value
   //Serial.println(upLink);
   http.begin(upLink);  //Specify request destination
   int httpCode = http.GET();  //Send the GET request
