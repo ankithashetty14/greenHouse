@@ -21,5 +21,5 @@
 
 #### Connection Diagram
 
-
+![align=center](connection.png)
 
